@@ -95,8 +95,8 @@ export default function Home() {
             <div className="flex-auto flex justify-center animate-bounce"><MdOutlineSick /></div>
           </div>
         </div>
-        <div className="absolute z-0 top-0 w-96 h-96 left-0 bg-primary rounded-full"></div>
-        <div className="absolute z-0 top-0 w-96 h-96 right-0 bg-chart-4 rounded-full"></div>
+        <div className="absolute z-0 top-0 w-32 h-32 md:w-96 md:h-96 left-0 bg-primary rounded-full"></div>
+        <div className="absolute z-0 top-0 w-32 h-32 md:w-96 md:h-96 right-0 bg-chart-4 rounded-full"></div>
         <section className="py-28 relative lg:py-40 bg-gradient-to-br backdrop-blur-3xl from-slate-50/80 via-white/80 to-slate-50/80 overflow-hidden">
           <div className="absolute inset-0 bg-grid-slate-100/40 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.7))]" />
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse" />
