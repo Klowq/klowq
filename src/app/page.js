@@ -271,7 +271,7 @@ export default function Home() {
                 </div>
                 <h3 className="md:text-2xl font-bold text-slate-900 mb-5 tracking-tight">Select Your Role</h3>
                 <p className="text-slate-600 leading-relaxed text-sm md:text-lg">
-                  Choose whether you're seeking medical consultation as a patient or providing healthcare services as a licensed professional.
+                  Choose whether you&apos;re seeking medical consultation as a patient or providing healthcare services as a licensed professional.
                 </p>
               </Card>
             </div>
@@ -494,7 +494,7 @@ export default function Home() {
               Questions & Answers
             </h2>
             <p className="text-sm md:text-lg lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
-              Everything you need to know about KLOWQ's anonymous healthcare platform
+              Everything you need to know about KLOWQ&apos;s anonymous healthcare platform
             </p>
           </div>
 
