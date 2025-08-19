@@ -2,20 +2,24 @@
 import Image from "next/image";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { AiOutlineClose, AiOutlineComment } from "react-icons/ai";
-import { TbClock, TbStethoscope } from "react-icons/tb";
+import { TbClock, TbPillFilled, TbPills, TbStethoscope } from "react-icons/tb";
 import { BsShield } from "react-icons/bs";
 import klowqLogo from '@assets/logo.png'
 import { Button } from "@/components/organisms/Button";
 import { FiCheckCircle, FiFileText } from "react-icons/fi";
 import { RiGooglePlayLine, RiShieldLine } from "react-icons/ri";
 import { RxLightningBolt } from "react-icons/rx";
-import { FaAppStore } from "react-icons/fa";
+import { FaAppStore, FaPills } from "react-icons/fa";
+import { MdOutlineSick } from "react-icons/md";
+import { FaUserDoctor } from "react-icons/fa6";
 import { SlStar } from "react-icons/sl";
 import { useState } from "react";
 import { LuAward, LuHeartHandshake, LuSmartphone, LuUsers } from "react-icons/lu";
 import { Badge } from "@/components/organisms/Badge";
 import { Card } from "@/components/organisms/Card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/organisms/Accordion";
+import { LiaUserNurseSolid } from "react-icons/lia";
+import { GiLoveInjection } from "react-icons/gi";
 
 export default function Home() {
 
@@ -74,69 +78,87 @@ export default function Home() {
         )}
       </nav>
 
-      <section className="relative py-28 lg:py-40 bg-gradient-to-br from-slate-50 via-white to-slate-50 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-slate-100/40 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.7))]" />
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/3 right-1/3 w-48 h-48 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
+      <div className="grid items-center relative">
+        <div className="text-gray-500/5 text-7xl absolute pointer-events-none z-10 h-full w-full bottom-0 right-0">
+          <div className="h-[50%] relative flex items-center justify-between">
+            <div className="flex-auto flex justify-center animate-bounce"><GiLoveInjection /></div>
+            <div className="flex-auto flex justify-center animate-bounce relative bottom-16"><FaPills /></div>
+            <div className="flex-auto flex justify-center animate-bounce"><TbPills /></div>
+          </div>
+          <div className="h-[50%] relative flex items-center justify-between">
+            <div className="flex-auto flex justify-center animate-bounce"><TbPillFilled /></div>
+            <div className="flex-auto flex justify-center delay-700 animate-bounce"><TbStethoscope /></div>
+          </div>
+          <div className="h-[50%] relative flex items-center justify-between">
+            <div className="flex-auto flex justify-center animate-bounce"><LiaUserNurseSolid /></div>
+            <div className="flex-auto flex justify-center animate-bounce relative bottom-64"><FaUserDoctor /></div>
+            <div className="flex-auto flex justify-center animate-bounce"><MdOutlineSick /></div>
+          </div>
+        </div>
+        <div className="absolute z-0 top-0 w-96 h-96 left-0 bg-primary rounded-full"></div>
+        <div className="absolute z-0 top-0 w-96 h-96 right-0 bg-chart-4 rounded-full"></div>
+        <section className="py-28 relative lg:py-40 bg-gradient-to-br backdrop-blur-3xl from-slate-50/80 via-white/80 to-slate-50/80 overflow-hidden">
+          <div className="absolute inset-0 bg-grid-slate-100/40 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.7))]" />
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/3 right-1/3 w-48 h-48 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-6xl mx-auto">
-            <div className="inline-flex text-[9px] md:text-base items-center space-x-3 bg-gradient-to-r from-primary/5 to-blue-500/5 border border-primary/20 rounded-full px-6 py-3 mb-10 shadow-lg backdrop-blur-sm">
-              <BsShield className="h-5 w-5 text-primary" />
-              <span className="font-medium text-primary tracking-wide">Revolutionary Anonymous Healthcare Platform</span>
-            </div>
-
-            <h1 className="text-[34px] md:text-6xl lg:text-8xl font-bold text-slate-900 mb-10 leading-[0.9] tracking-tight">
-              Healthcare Without
-              <span className="block text-transparent bg-gradient-to-r from-primary to-blue-600 bg-clip-text">Boundaries</span>
-            </h1>
-
-            <p className="text-sm md:text-lg lg:text-2xl text-slate-600 mb-16 max-w-5xl mx-auto leading-relaxed font-light tracking-wide">
-              Connect with board-certified medical professionals through our secure, anonymous platform.
-              Experience comprehensive healthcare consultations without compromising your privacy or identity.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
-              <Button
-                size="lg"
-                onClick={() => setShowRoleSelection(true)}
-                className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white shadow-2xl hover:shadow-3xl transition-all duration-500 px-12 py-5 text-xl h-auto rounded-2xl group"
-              >
-                Start Your Journey
-                {/* <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" /> */}
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 px-12 py-5 text-xl h-auto shadow-xl hover:shadow-2xl transition-all duration-500 rounded-2xl backdrop-blur-sm"
-              >
-                Watch Demo
-              </Button>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              <div className="text-center group">
-                <div className="text-xl md:text-2xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-primary to-blue-600 bg-clip-text mb-3 group-hover:scale-110 transition-transform duration-300">100%</div>
-                <div className="text-slate-600 font-medium tracking-wide">Anonymous</div>
+          <div className="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-6xl mx-auto">
+              <div className="inline-flex text-[9px] md:text-base items-center space-x-3 bg-gradient-to-r from-primary/5 to-blue-500/5 border border-primary/20 rounded-full px-6 py-3 mb-10 shadow-lg backdrop-blur-sm">
+                <BsShield className="h-5 w-5 text-primary" />
+                <span className="font-medium text-primary tracking-wide">Revolutionary Anonymous Healthcare Platform</span>
               </div>
-              <div className="text-center group">
-                <div className="text-xl md:text-2xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-primary to-blue-600 bg-clip-text mb-3 group-hover:scale-110 transition-transform duration-300">24/7</div>
-                <div className="text-slate-600 font-medium tracking-wide">Available</div>
+
+              <h1 className="text-[34px] md:text-6xl lg:text-8xl font-bold text-slate-900 mb-10 leading-[0.9] tracking-tight">
+                Healthcare Without
+                <span className="block text-transparent bg-gradient-to-r  mt-5 from-primary to-blue-600 bg-clip-text">Boundaries</span>
+              </h1>
+
+              <p className="text-sm md:text-lg lg:text-2xl text-slate-600 mb-16 max-w-5xl mx-auto leading-relaxed font-light tracking-wide">
+                Connect with board-certified medical professionals through our secure, anonymous platform.
+                Experience comprehensive healthcare consultations without compromising your privacy or identity.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
+                <Button
+                  size="lg"
+                  onClick={() => setShowRoleSelection(true)}
+                  className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white shadow-2xl hover:shadow-3xl transition-all duration-500 px-12 py-5 text-xl h-auto rounded-2xl group"
+                >
+                  Start Your Journey
+                  {/* <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" /> */}
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 px-12 py-5 text-xl h-auto shadow-xl hover:shadow-2xl transition-all duration-500 rounded-2xl backdrop-blur-sm"
+                >
+                  Watch Demo
+                </Button>
               </div>
-              <div className="text-center group">
-                <div className="text-xl md:text-2xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-primary to-blue-600 bg-clip-text mb-3 group-hover:scale-110 transition-transform duration-300">HIPAA</div>
-                <div className="text-slate-600 font-medium tracking-wide">Compliant</div>
-              </div>
-              <div className="text-center group">
-                <div className="text-xl md:text-2xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-primary to-blue-600 bg-clip-text mb-3 group-hover:scale-110 transition-transform duration-300">500+</div>
-                <div className="text-slate-600 font-medium tracking-wide">Specialists</div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                <div className="text-center group">
+                  <div className="text-xl md:text-2xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-primary to-blue-600 bg-clip-text mb-3 group-hover:scale-110 transition-transform duration-300">100%</div>
+                  <div className="text-slate-600 font-medium tracking-wide">Anonymous</div>
+                </div>
+                <div className="text-center group">
+                  <div className="text-xl md:text-2xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-primary to-blue-600 bg-clip-text mb-3 group-hover:scale-110 transition-transform duration-300">24/7</div>
+                  <div className="text-slate-600 font-medium tracking-wide">Available</div>
+                </div>
+                <div className="text-center group">
+                  <div className="text-xl md:text-2xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-primary to-blue-600 bg-clip-text mb-3 group-hover:scale-110 transition-transform duration-300">HIPAA</div>
+                  <div className="text-slate-600 font-medium tracking-wide">Compliant</div>
+                </div>
+                <div className="text-center group">
+                  <div className="text-xl md:text-2xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-primary to-blue-600 bg-clip-text mb-3 group-hover:scale-110 transition-transform duration-300">500+</div>
+                  <div className="text-slate-600 font-medium tracking-wide">Specialists</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-
+        </section>
+      </div>
 
       <section id="features" className="md:py-28 py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
