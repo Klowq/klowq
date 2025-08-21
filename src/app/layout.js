@@ -25,7 +25,7 @@ export const metadata = {
     siteName: "Klowq",
     images: [
       {
-        url: "/og-image.png", // replace with your logo/banner
+        url: "/og-image.png", 
         width: 1200,
         height: 630,
         alt: "Klowq Healthcare",
