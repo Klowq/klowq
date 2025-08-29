@@ -28,7 +28,7 @@ function page() {
 
                         {
                             Array.from({ length: 15 }).map((_, index) => (
-                                <Link href="/The-Future-of-Anonymous-Healthcare" key={index}>
+                                <Link href="/insights/The-Future-of-Anonymous-Healthcare" key={index}>
                                     <div className="md:col-span-2 lg:col-span-1 group">
                                         <Card className="border-0 shadow-xl hover:shadow-3xl transition-all duration-500 bg-white h-full group-hover:-translate-y-2 rounded-3xl overflow-hidden">
                                             <div className="relative">
