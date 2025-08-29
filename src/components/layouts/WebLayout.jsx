@@ -6,11 +6,11 @@ import { AiOutlineClose } from "react-icons/ai";
 import klowqLogo from '@assets/logo.png'
 import { Button } from "@/components/organisms/Button";
 import { useState } from "react";
+import Link from 'next/link';
 
 function WebLayout({ children }) {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
 
     return (
         <>
@@ -18,12 +18,14 @@ function WebLayout({ children }) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-20">
                         <div className="flex items-center space-x-4">
-                            <div className="flex items-center space-x-4">
-                                <div className="w-11 h-11 bg-gradient-to-br from-white to-slate-50 rounded-xl shadow-md border border-slate-200/50 flex items-center justify-center">
-                                    <Image src={klowqLogo} alt="KLOWQ" className="w-7 h-7" />
+                            <Link href='/'>
+                                <div className="flex items-center space-x-4">
+                                    <div className="w-11 h-11 bg-gradient-to-br from-white to-slate-50 rounded-xl shadow-md border border-slate-200/50 flex items-center justify-center">
+                                        <Image src={klowqLogo} alt="KLOWQ" className="w-7 h-7" />
+                                    </div>
+                                    <span className="text-2xl font-semibold text-slate-900 tracking-tight">KLOWQ</span>
                                 </div>
-                                <span className="text-2xl font-semibold text-slate-900 tracking-tight">KLOWQ</span>
-                            </div>
+                            </Link>
                         </div>
 
                         <div className="hidden lg:flex items-center space-x-12">
@@ -71,12 +73,15 @@ function WebLayout({ children }) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                     <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-16">
                         <div className="md:col-span-2 space-y-6">
-                            <div className="flex items-center">
-                                <div className="flex items-center justify-center">
-                                    <Image src={klowqLogo} alt="KLOWQ" className="w-9 md:w-24 h-9 md:h-24" />
+                            <Link href='/'>
+                                <div className="flex items-center">
+                                    <div className="flex items-center justify-center">
+                                        <Image src={klowqLogo} alt="KLOWQ" className="w-9 md:w-24 h-9 md:h-24" />
+                                    </div>
+                                    <span className="md:text-3xl text-sm relative -left-1 md:-left-5 text-primary font-semibold tracking-tight">KLOWQ</span>
                                 </div>
-                                <span className="md:text-3xl text-sm relative -left-1 md:-left-5 text-primary font-semibold tracking-tight">KLOWQ</span>
-                            </div>
+                            </Link>
+
                             <p className="text-slate-600 leading-relaxed max-w-md md:text-lg">
                                 Revolutionizing healthcare through anonymous consultations that connect patients with verified
                                 medical professionals while maintaining complete privacy and security.
