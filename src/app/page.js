@@ -270,9 +270,9 @@ export default function Home() {
                   <div className="inline-flex items-center justify-center md:w-24 w-12 md:h-24 h-12 bg-gradient-to-br from-primary/10 to-primary/5 rounded-md md:rounded-3xl mb-4 md:mb-8 group-hover:scale-110 transition-transform duration-500 shadow-xl">
                     <span className="text-lg md:text-3xl font-bold text-primary">03</span>
                   </div>
-                  <h3 className="md:text-2xl font-bold text-slate-900 mb-5 tracking-tight">Receive Care</h3>
+                  <h3 className="md:text-2xl font-bold text-slate-900 mb-5 tracking-tight">Receive / Give Care</h3>
                   <p className="text-slate-600 leading-relaxed text-sm md:text-lg">
-                    Get professional medical advice, digital prescriptions, and ongoing healthcare support through our comprehensive platform.
+                    Get or give professional medical advice, digital prescriptions, and ongoing healthcare support through our comprehensive platform.
                   </p>
                 </Card>
               </div>
