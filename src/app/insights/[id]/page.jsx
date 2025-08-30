@@ -8,7 +8,7 @@ import { LuUser } from 'react-icons/lu'
 function page() {
     return (
         <WebLayout>
-            <div className="flex mx-auto max-w-[90rem] p-3 py-16">
+            <div className="md:flex mx-auto max-w-[90rem] p-3 py-16">
                 <div className="flex-auto p-3">
                     <article className="max-w-3xl mx-auto bg-white overflow-hidden">
                         {/* Featured Image */}
@@ -17,7 +17,7 @@ function page() {
                                 src="https://images.unsplash.com/photo-1659353886114-9aa119aef5aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWxlbWVkaWNpbmUlMjBkb2N0b3IlMjBjb25zdWx0YXRpb258ZW58MXx8fHwxNzU1ODA3MTQ0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                                 alt="Future of Web Development"
                                 fill
-                                className="object-cover"
+                                className="object-cover h-full w-full "
                             />
                         </div>
 
@@ -73,7 +73,7 @@ function page() {
                         </div>
                     </article>
                 </div>
-                <div className="w-96 pr-6">
+                <div className="sm:w-96">
                     <div className="sticky top-20 space-y-3 p-3">
                         <div className='font-bold text-lg md:text-2xl'>Related Insights</div>
                         {Array.from({ length: 5 }).map((_, i) => (
