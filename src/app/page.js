@@ -406,7 +406,7 @@ export default function Home() {
 
               {
                 Array.from({ length: 6 }).map((_, index) => (
-                  <Link href="/The-Future-of-Anonymous-Healthcare" key={index}>
+                  <Link href="/insights/The-Future-of-Anonymous-Healthcare" key={index}>
                     <div className="md:col-span-2 lg:col-span-1 group">
                       <Card className="border-0 shadow-xl hover:shadow-3xl transition-all duration-500 bg-white h-full group-hover:-translate-y-2 rounded-3xl overflow-hidden">
                         <div className="relative">
@@ -555,7 +555,7 @@ export default function Home() {
 
 
         <section id="faq" className="py-28 bg-white">
-          <div className="mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-[94rem] px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 md:mb-24">
               <Badge className="bg-gradient-to-r from-primary/10 to-blue-500/10 text-primary border-primary/20 mb-4 md:mb-8 px-4 py-2 text-sm tracking-wide">Frequently Asked Questions</Badge>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-3 md:mb-8 leading-tight tracking-tight">

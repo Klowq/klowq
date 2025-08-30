@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { HiBars3BottomLeft } from 'react-icons/hi2'
 import { RiShieldLine } from 'react-icons/ri'
 import { AiOutlineClose } from "react-icons/ai";
@@ -11,9 +11,20 @@ import Link from 'next/link';
 function WebLayout({ children }) {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const headerRef = useRef(null);
+    const subHeaderRef = useRef(null);
+
+    useEffect(() => {
+        if (headerRef.current) {
+            const height = headerRef.current.offsetHeight;
+            const subHeight = subHeaderRef.current.offsetHeight;
+            document.documentElement.style.setProperty('--header-height', `${height}px`);
+            document.documentElement.style.setProperty('--header-subheight', `${subHeight}px`);
+        }
+    }, []);
 
     return (
-        <>
+        <div className='flex flex-col min-h-screen'>
             <nav className="border-b border-slate-200/60 bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-20">
@@ -66,8 +77,11 @@ function WebLayout({ children }) {
                 )}
             </nav>
 
+            
 
-            {children}
+            <div className={`flex-grow flex mt-[var(--header-height)]`}>
+                <div className={`flex-auto`}>{children}</div>
+            </div>
 
             <footer className="bg-white border-t border-slate-200/60">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -131,7 +145,7 @@ function WebLayout({ children }) {
                     </div>
                 </div>
             </footer>
-        </>
+        </div>
     )
 }
 
