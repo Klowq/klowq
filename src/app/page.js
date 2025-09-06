@@ -10,6 +10,7 @@ import { RiGooglePlayLine, RiShieldLine } from "react-icons/ri";
 import { RxLightningBolt } from "react-icons/rx";
 import { FaAppStore, FaPills } from "react-icons/fa";
 import { MdOutlineSick } from "react-icons/md";
+import mockup from '@assets/images/mockup2.png'
 import { FaArrowRightLong, FaUserDoctor } from "react-icons/fa6";
 import { SlStar } from "react-icons/sl";
 import { LuAward, LuHeartHandshake, LuSmartphone, LuUsers } from "react-icons/lu";
@@ -358,8 +359,8 @@ export default function Home() {
               </div>
 
               <div className="relative">
-                <div className="h-[450px] bg-primary flex items-center justify-center">
-                  <div className="text-white">Mobile mockup</div>
+                <div className=" flex items-center justify-center">
+                  <Image src={mockup} alt="mockup_screen" className="w-full" />
                 </div>
                 <div className="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-3xl p-4 md:p-9 shadow-2xl">
                   <div className="text-center">

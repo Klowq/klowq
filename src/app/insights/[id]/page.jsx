@@ -56,6 +56,7 @@ function page() {
                                     key trends are emerging that will shape the way we build and interact with
                                     applications
                                 </p>
+                                
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam dolorem? Exercitationem, autem nihil hic non repellendus soluta voluptatibus inventore doloremque dolorum, ullam quos natus! Consectetur deserunt eveniet facilis sed commodi aliquam optio dicta, eius repellendus cupiditate eum quod, rerum deleniti officia asperiores atque earum ipsum, debitis expedita reprehenderit reiciendis provident dolor? Voluptatibus et accusantium aspernatur repellat? Iure dignissimos ad nesciunt! Recusandae error veritatis eum rerum. Adipisci, illo eius nam atque ab nisi molestiae blanditiis voluptatum earum repellendus alias, impedit, nulla nobis eligendi ea placeat excepturi sed modi! Laudantium architecto amet quis mollitia sunt beatae repudiandae deserunt placeat sint atque dolores possimus consectetur ipsam eos consequatur, ratione explicabo obcaecati corrupti. Quaerat, sed error minima, et harum aperiam facere iusto, quae alias natus quos ex esse pariatur eveniet aliquam dolore! Voluptatem eaque molestias aut veritatis commodi tempore repellat culpa 
                                 </p>
