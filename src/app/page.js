@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { AiOutlineComment } from "react-icons/ai";
 import { TbClock, TbPillFilled, TbPills, TbStethoscope } from "react-icons/tb";
-import {  BsShield } from "react-icons/bs";
+import { BsShield } from "react-icons/bs";
 import klowqLogo from '@assets/logo.png'
 import { Button } from "@/components/organisms/Button";
 import { FiCheckCircle, FiFileText } from "react-icons/fi";
@@ -22,12 +22,17 @@ import { GiLoveInjection } from "react-icons/gi";
 import Link from "next/link";
 import WebLayout from "@/components/layouts/WebLayout";
 import InsightChip from "@/components/organisms/InsightChip";
+import WaitList from "@/components/organisms/WaitList";
+import { useState } from "react";
 
 export default function Home() {
+  const [showWaitModal, setshowWaitModal] = useState(false)
 
 
   return (
-    <WebLayout>
+    <WebLayout >
+      <WaitList showWaitModal={showWaitModal} setshowWaitModal={setshowWaitModal} />
+
       <div className="min-h-screen bg-white">
         <div className="grid items-center relative">
           <div className="text-gray-500/5 text-7xl absolute pointer-events-none z-10 h-full w-full bottom-0 right-0">
@@ -73,10 +78,10 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
                   <Button
                     size="lg"
-                    onClick={() => setShowRoleSelection(true)}
-                    className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white shadow-2xl hover:shadow-3xl transition-all duration-500 px-12 py-5 text-xl h-auto rounded-2xl group"
+                    onClick={() => setshowWaitModal(true)}
+                    className="bg-gradient-to-r from-primary cursor-pointer to-primary/90 hover:from-primary/90 hover:to-primary text-white shadow-2xl hover:shadow-3xl transition-all duration-500 px-12 py-5 text-xl h-auto rounded-2xl group"
                   >
-                    Start Your Journey
+                    Join WaitList
                     {/* <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" /> */}
                   </Button>
                   <Button
@@ -328,8 +333,14 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-4 pt-8">
                   <Button
                     size="lg"
-                    className="bg-slate-900 hover:bg-slate-800 text-white shadow-xl hover:shadow-2xl transition-all duration-300 px-8 py-4 text-lg h-auto rounded-2xl group flex items-center justify-center"
+                    className="bg-slate-900 relative hover:bg-slate-800 text-white shadow-xl hover:shadow-2xl transition-all duration-300 px-8 py-4 text-lg h-auto rounded-2xl group flex items-center justify-center"
                   >
+                    <div className='relative right-1.5'>
+                      <div className='bg-red-500 absolute -top-11 -left-5 h-4 text-[8px] flex items-center gap-1 text-white px-2 rounded-md'>
+                        <div>coming</div>
+                        <div>soon</div>
+                      </div>
+                    </div>
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                         <FaAppStore className="md:w-5 md:h-5 text-slate-900" />
@@ -343,8 +354,14 @@ export default function Home() {
 
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-xl hover:shadow-2xl transition-all duration-300 px-8 py-4 text-lg h-auto rounded-2xl group flex items-center justify-center"
+                    className="bg-gradient-to-r relative from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-xl hover:shadow-2xl transition-all duration-300 px-8 py-4 text-lg h-auto rounded-2xl group flex items-center justify-center"
                   >
+                    <div className='relative right-1.5'>
+                      <div className='bg-red-500 absolute -top-11 -left-5 h-4 text-[8px] flex items-center gap-1 text-white px-2 rounded-md'>
+                        <div>coming</div>
+                        <div>soon</div>
+                      </div>
+                    </div>
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                         <RiGooglePlayLine className="md:w-5 md:h-5 text-green-600" />
@@ -693,10 +710,10 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="secondary"
-                onClick={() => setShowRoleSelection(true)}
-                className="bg-white text-primary hover:bg-gray-50 shadow-2xl hover:shadow-3xl transition-all duration-500 px-12 py-5 text-xl h-auto rounded-2xl group"
+                onClick={() => setshowWaitModal(true)}
+                className="bg-white text-primary cursor-pointer hover:bg-gray-50 shadow-2xl hover:shadow-3xl transition-all duration-500 px-12 py-5 text-xl h-auto rounded-2xl group"
               >
-                Start Your Journey Today
+                Join WaitList
                 {/* <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" /> */}
               </Button>
             </div>

@@ -7,12 +7,15 @@ import klowqLogo from '@assets/logo.png'
 import { Button } from "@/components/organisms/Button";
 import { useState } from "react";
 import Link from 'next/link';
+import WaitList from '../organisms/WaitList';
 
-function WebLayout({ children }) {
+function WebLayout({ children  }) {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const headerRef = useRef(null);
     const subHeaderRef = useRef(null);
+    const [showWaitModal, setshowWaitModal] = useState(false)
+
 
     useEffect(() => {
         if (headerRef.current) {
@@ -25,7 +28,8 @@ function WebLayout({ children }) {
 
     return (
         <div className='flex flex-col min-h-screen'>
-            <nav className="border-b border-slate-200/60 bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+            <WaitList showWaitModal={showWaitModal} setshowWaitModal={setshowWaitModal} />
+            <nav className="border-b border-slate-200/60 bg-white/95 backdrop-blur-md sticky top-0 z-40 shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-20">
                         <div className="flex items-center space-x-4">
@@ -48,10 +52,10 @@ function WebLayout({ children }) {
 
                         <div className="flex items-center space-x-4">
                             <Button
-                                onClick={() => setShowRoleSelection(true)}
+                                onClick={() => setshowWaitModal(true)}
                                 className="bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-3 rounded-xl"
                             >
-                                Get Started
+                                Join WaitList
                                 {/* <ArrowRight className="w-4 h-4 ml-2" /> */}
                             </Button>
 
@@ -77,7 +81,7 @@ function WebLayout({ children }) {
                 )}
             </nav>
 
-            
+
 
             <div className={`flex-grow flex mt-[var(--header-height)]`}>
                 <div className={`flex-auto`}>{children}</div>
