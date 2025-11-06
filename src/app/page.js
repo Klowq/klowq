@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { AiOutlineComment } from "react-icons/ai";
 import { TbClock, TbPillFilled, TbPills, TbStethoscope } from "react-icons/tb";
-import { BsShield } from "react-icons/bs";
+import { BsArrowRight, BsShield } from "react-icons/bs";
 import klowqLogo from '@assets/logo.png'
 import { Button } from "@/components/organisms/Button";
 import { FiCheckCircle, FiFileText } from "react-icons/fi";
@@ -82,7 +82,7 @@ export default function Home() {
                     className="bg-gradient-to-r from-primary cursor-pointer to-primary/90 hover:from-primary/90 hover:to-primary text-white shadow-2xl hover:shadow-3xl transition-all duration-500 px-12 py-5 text-xl h-auto rounded-2xl group"
                   >
                     Join WaitList
-                    {/* <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" /> */}
+                    <BsArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
                   </Button>
                   <Button
                     variant="outline"
@@ -714,7 +714,7 @@ export default function Home() {
                 className="bg-white text-primary cursor-pointer hover:bg-gray-50 shadow-2xl hover:shadow-3xl transition-all duration-500 px-12 py-5 text-xl h-auto rounded-2xl group"
               >
                 Join WaitList
-                {/* <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" /> */}
+                <BsArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
 

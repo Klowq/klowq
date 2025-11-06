@@ -8,6 +8,7 @@ import { Button } from "@/components/organisms/Button";
 import { useState } from "react";
 import Link from 'next/link';
 import WaitList from '../organisms/WaitList';
+import { BsArrowRight } from 'react-icons/bs';
 
 function WebLayout({ children  }) {
 
@@ -56,7 +57,7 @@ function WebLayout({ children  }) {
                                 className="bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-3 rounded-xl"
                             >
                                 Join WaitList
-                                {/* <ArrowRight className="w-4 h-4 ml-2" /> */}
+                                <BsArrowRight className="w-4 h-4 ml-2" />
                             </Button>
 
                             <button
