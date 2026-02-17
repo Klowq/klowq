@@ -16,25 +16,16 @@ export const metadata = {
   description:
     "Connect with board-certified medical professionals through our secure, anonymous platform. Experience comprehensive healthcare consultations without compromising your privacy or identity.",
   metadataBase: new URL("https://klowq.com"),
-
   openGraph: {
     title: "Klowq | Healthcare Without Boundaries",
     description:
       "Connect with board-certified medical professionals through our secure, anonymous platform. Experience comprehensive healthcare consultations without compromising your privacy or identity.",
     url: "https://klowq.com",
     siteName: "Klowq",
-    images: [
-      {
-        url: "/og-image.png", 
-        width: 1200,
-        height: 630,
-        alt: "Klowq Healthcare",
-      },
-    ],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Klowq Healthcare" }],
     locale: "en_US",
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     site: "@klowq",
@@ -44,18 +35,13 @@ export const metadata = {
       "Connect with board-certified medical professionals through our secure, anonymous platform. Experience comprehensive healthcare consultations without compromising your privacy or identity.",
     images: ["/og-image.png"],
   },
-
-  alternates: {
-    canonical: "https://klowq.com",
-  },
+  alternates: { canonical: "https://klowq.com" },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>

@@ -1,12 +1,12 @@
 import React from 'react';
 
-// interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-//   children: React.ReactNode;
-//   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
-//   size?: 'default' | 'sm' | 'lg' | 'icon';
-//   className?: string;
-//   disabled?: boolean;
-// }
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
+  variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
+  className?: string;
+  disabled?: boolean;
+}
 
 const buttonVariants = {
   default: 'bg-primary text-primary-foreground shadow hover:bg-primary/90',
@@ -31,12 +31,11 @@ export function Button({
   className,
   disabled = false,
   ...props
-}) {
+}: ButtonProps) {
   return (
     <button
       disabled={disabled}
-      className={
-        `${buttonVariants[variant]} ${className} ${buttonSizes[size]} inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 `}
+      className={`${buttonVariants[variant]} ${className ?? ''} ${buttonSizes[size]} inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50`}
       {...props}
     >
       {children}
