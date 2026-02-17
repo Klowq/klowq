@@ -3,7 +3,7 @@ import AppModal from './AppModal';
 import AppInput from './AppInput';
 import Link from 'next/link';
 import { RiLinkedinBoxFill, RiTwitterXFill } from 'react-icons/ri';
-import { FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import Image from 'next/image';
 import klowqLogo from '@assets/logo.png';
 import { IoMdClose } from 'react-icons/io';
@@ -48,13 +48,13 @@ export default function WaitList({ showWaitModal, setshowWaitModal }: WaitListPr
               </div>
             </form>
             <div className="flex items-center text-white justify-center gap-3">
-              <Link target="_blank" href="https://x.com/BubbleGumHealth?ref_src=twsrc%5Etfw">
+              <Link target="_blank" href="https://x.com/klowqapp">
                 <div className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer bg-primary"><RiTwitterXFill /></div>
               </Link>
-              <Link target="_blank" href=" https://www.instagram.com/bubblegumhealth">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer bg-primary"><FaInstagram /></div>
+              <Link target="_blank" href="https://web.facebook.com/profile.php?id=61579475548168">
+                <div className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer bg-primary"><FaFacebookF /></div>
               </Link>
-              <Link target="_blank" href="https://www.linkedin.com/company/bubble-gum-health/about/?viewAsMember=true">
+              <Link target="_blank" href="https://www.linkedin.com/in/klowq-app-84192337a/">
                 <div className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer bg-primary"><RiLinkedinBoxFill /></div>
               </Link>
             </div>
